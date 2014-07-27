@@ -1,0 +1,88 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Tangerine:400,700|Open+Sans:400italic,400,700);
+
+$body-color: #404040;
+$link-color: #808080;
+$link-hover-color: #000000;
+$border-color: #e1e1e1;
+$nav-bg-color: #f8f8f8;
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: $body-color;
+}
+
+.main-banner, body {
+  background: image-url('halftone.png');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tangerine', cursive;
+  color: $body-color;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+.logo {
+  text-align: center;
+  a {
+    img {
+      width: 250px;
+      max-width: 100%;
+    }
+  }
+}
+
+.contain-to-grid {
+  margin-bottom: 1em;
+  border-top: solid 1px $border-color;
+  box-shadow: 0px 1px 7px $border-color;
+  .top-bar-section {
+    ul {
+      li {
+        a {
+          border-right: solid 1px $border-color;
+        }
+        &:first-child {
+          a {
+            border-left: solid 1px $border-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.suit {
+  font-size: 2em;
+  margin-right: 5px;
+  text-shadow: 1px 1px 1px gray;
+  &.red {
+    color: red;
+  }
+  &.black {
+    color: black;
+  }
+}
+
+footer {
+  background: $nav-bg-color;
+  border-top: solid 1px $border-color;
+  text-align: center;
+  color: $link-color;
+  margin-top: 1em;
+  p {
+    font-size: 0.75em;
+    margin-bottom: 0;
+    padding: 0.5em 0;
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Cards</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "Cards Premium E-Liquid" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="main-banner">
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="logo">
+            <%= link_to image_tag('Cards-Logo.png'), root_url %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1>
+              <a href="#"></a>
+            </h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li><a href="#">Our Menu</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <%= yield %>
+    <footer>
+      <div class="row">
+        <div class="small-12 columns">
+          <p>
+            &copy; 2014 Cards E-Liquid. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
