@@ -13,5 +13,4 @@ class ContactForm < MailForm::Base
       :from => %("#{name}" <#{email}>)
     }
   end
-  
 end
