@@ -12,10 +12,13 @@ $nav-bg-color: #f8f8f8;
 body {
   font-family: 'PT Sans', sans-serif;
   color: $body-color;
+  background: image-url('halftone.png');
 }
 
-.main-banner, body {
-  background: image-url('halftone.png');
+.main-banner {
+  background: image-url('banner-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,18 +61,6 @@ h1 {
   }
 }
 
-.suit {
-  font-size: 2em;
-  margin-right: 5px;
-  text-shadow: 1px 1px 1px gray;
-  &.red {
-    color: red;
-  }
-  &.black {
-    color: black;
-  }
-}
-
 footer {
   background: $nav-bg-color;
   border-top: solid 1px $border-color;
@@ -85,4 +76,38 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.suit {
+  background: white;
+  border: solid 1px $border-color;
+  border-radius: 100%;
+  margin-bottom: 1em;
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.vcard {
+  background: white;
+}
+
+.button {
+  background: transparent;
+  border-width: 1px;
+  border-color: black;
+  color: black;
+  transition: 0.4s;
+  &:hover {
+  background: transparent;
+  border-width: 1px;
+  border-color: $link-color;
+  color: $link-color;
+  }
+}
+
+input[type=submit] {
+  border-radius: 5px;
 }
