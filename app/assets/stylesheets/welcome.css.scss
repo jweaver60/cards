@@ -102,10 +102,10 @@ footer {
   color: black;
   transition: 0.4s;
   &:hover {
-  background: transparent;
-  border-width: 1px;
-  border-color: $link-color;
-  color: $link-color;
+    background: transparent;
+    border-width: 1px;
+    border-color: $link-color;
+    color: $link-color;
   }
 }
 
